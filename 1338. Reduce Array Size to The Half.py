@@ -15,7 +15,9 @@ def minSetSize(self, arr: List[int]) -> int:
             if(req<=0):
                 return l
         
- def minSetSize(self, arr: List[int]) -> int:
+# Priority Queue logic
+
+def minSetSize(self, arr: List[int]) -> int:
         heap = []
         dic = {}
         for i in arr:
