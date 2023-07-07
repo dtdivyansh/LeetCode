@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+
 def shipWithinDays(self, weights: List[int], D: int) -> int:
         def fun(weights,d,k,n):
             v=0
