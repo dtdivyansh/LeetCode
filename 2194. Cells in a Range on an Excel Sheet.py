@@ -13,3 +13,17 @@ class Solution:
             i+=1
         
         return ans
+
+
+# OPTIMISED SOL
+
+class Solution:
+    def cellsInRange(self, s: str) -> List[str]:
+        alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        ans = []
+        cell1, cell2 = s.split(':')
+        c1, c2, r1, r2 = cell1[0], cell2[0], int(cell1[1]), int(cell2[1])
+        for p in range(alpha.index(c1), alpha.index(c2)+1):
+            ans.extend([alpha[p]+str(k) for k in range(r1, r2+1)])
+        
+        return ans
