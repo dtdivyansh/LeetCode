@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/palindrome-number/description/
+
 def isPalindrome(self, x: int) -> bool:
         if(x<0):
             return False
@@ -14,3 +16,13 @@ def isPalindrome(self, x: int) -> bool:
                 i+=1
                 j-=1
             return True
+
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        s = str(x)
+        l = len(s)
+        for i in range(l//2):
+            if s[i] != s[l-i-1]:
+                return False
+        return True
