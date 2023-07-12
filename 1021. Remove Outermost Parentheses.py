@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/remove-outermost-parentheses/
+
 def removeOuterParentheses(self, s: str) -> str:
         stack = ''
         ans = ""
