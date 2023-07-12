@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/divisor-game/
+
 # DIVISOR GAME DP
 
 def game2(n,alice):
