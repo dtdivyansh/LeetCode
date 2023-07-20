@@ -55,3 +55,19 @@ class Solution:
                     continue
 
         return ans
+
+
+# OPTIMISATION
+
+class Solution:
+    def arithmeticTriplets(self, nums: List[int], diff: int) -> int:
+        count = 0
+        first_dict = {}
+        second_dict = {}
+
+        for num in nums:
+            count += second_dict.get(num, 0)
+            second_dict[num + diff] = second_dict.get(num + diff, 0) + first_dict.get(num, 0)
+            first_dict[num + diff] = first_dict.get(num + diff, 0) + 1
+
+        return count
